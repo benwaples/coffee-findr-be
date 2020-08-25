@@ -19,8 +19,18 @@ async function run() {
                 );           
                 CREATE TABLE favorites (
                     id SERIAL PRIMARY KEY NOT NULL,
-                    name VARCHAR(512) NOT NULL,
-                    cool_factor INTEGER NOT NULL,
+                    biz_id VARCHAR(500) NOT NULL UNIQUE,
+                    title VARCHAR(512) NOT NULL,
+                    img VARCHAR(512) NOT NULL,
+                    address VARCHAR(512) NOT NULL,
+                    is_closed BOOLEAN NOT NULL,
+                    rating DECIMAL(2,1) NOT NULL,
+                    notes VARCHAR(65535) NOT NULL,
+                    yelp_url VARCHAR(65535) NOT NULL,
+                    lat VARCHAR(512) NOT NULL,
+                    lon VARCHAR(512) NOT NULL,
+                    city_lat VARCHAR(512) NOT NULL,
+                    city_lon VARCHAR(512) NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
