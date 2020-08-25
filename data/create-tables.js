@@ -29,8 +29,8 @@ async function run() {
                     yelp_url VARCHAR(65535) NOT NULL,
                     lat VARCHAR(512) NOT NULL,
                     lon VARCHAR(512) NOT NULL,
-                    cityLat VARCHAR(512) NOT NULL,
-                    cityLon VARCHAR(512) NOT NULL,
+                    city_lat VARCHAR(512) NOT NULL,
+                    city_lon VARCHAR(512) NOT NULL,
                     owner_id INTEGER NOT NULL REFERENCES users(id)
             );
         `);
